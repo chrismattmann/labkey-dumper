@@ -24,6 +24,7 @@ import java.util.Map;
 
 import org.labkey.remoteapi.CommandException;
 import org.labkey.remoteapi.Connection;
+import org.labkey.remoteapi.query.ContainerFilter;
 import org.labkey.remoteapi.query.SelectRowsCommand;
 import org.labkey.remoteapi.query.SelectRowsResponse;
 
@@ -59,6 +60,7 @@ public class LabkeyDumper {
 			CommandException {
 		// create a SelectRowsCommand to call the selectRows.api
 		SelectRowsCommand cmd = new SelectRowsCommand("study", "Study");
+		cmd.setContainerFilter(ContainerFilter.CurrentAndSubfolders);
 
 		// execute the command against the connection
 		// within the Api Test project folder
