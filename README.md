@@ -18,7 +18,7 @@ This project builds upon the [Labkey Client](https://github.com/chrismattmann/la
      "Label" : "Interactive Example - Study",
      "Species" : "null",
      "Container" : "6f743c1b-9506-1032-b9bf-51af32c4d069",
-     "_labkeyurl_Container" : "/labkey/project/HIV-CD4%20Study/begin.view?",
+     "_labkeyurl_Container" : "/labkey/project/Study Name/begin.view?",
    }
     ]
 }
