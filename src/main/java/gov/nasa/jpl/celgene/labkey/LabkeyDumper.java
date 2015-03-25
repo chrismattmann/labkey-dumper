@@ -50,7 +50,7 @@ public class LabkeyDumper {
 				System.out.println("\"" + key + "\" : \"" + study.get(key)
 						+ "\",");
 			}
-			System.out.println("}");
+			System.out.println("},");
 		}
 		System.out.println("]}");
 	}
