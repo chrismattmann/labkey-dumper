@@ -65,7 +65,7 @@ public class LabkeyDumper {
 		// execute the command against the connection
 		// within the Api Test project folder
 		SelectRowsResponse resp = cmd.execute(this.connection, projectName);
-		System.out.println(resp.getRowCount() + " rows were returned.");
+		System.err.println(resp.getRowCount() + " rows were returned.");
 		return resp.getRows();
 	}
 
