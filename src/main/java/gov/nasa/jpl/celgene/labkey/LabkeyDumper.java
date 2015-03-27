@@ -47,13 +47,27 @@ public class LabkeyDumper {
 
 		// loop over the returned rows
 		System.out.println("{\"studies\":[");
-		for (Map<String, Object> study : studyData) {
+		for (int i=0; i < studyData.size(); i++) {
+			Map<String, Object> study = studyData.get(i);
 			System.out.println("{");
-			for (String key : study.keySet()) {
-				System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson(String.valueOf(study.get(key)))
-						+ "\",");
+			String [] keySet = study.keySet().toArray(new String[]{});
+			for (int j=0; j < keySet.length; j++){
+			    String key = keySet[j];
+			    if (j+1 >= keySet.length){
+					System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson(String.valueOf(study.get(key)))
+							+ "\"");			    	
+			    }
+			    else{
+					System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson(String.valueOf(study.get(key)))
+							+ "\",");			    	
+			    }
 			}
-			System.out.println("},");
+			if (i+1 >= studyData.size()){
+				System.out.println("}");
+			}
+			else{
+				System.out.println("},");
+			}
 		}
 		System.out.println("]}");
 	}
