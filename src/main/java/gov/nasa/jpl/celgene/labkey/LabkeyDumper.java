@@ -28,6 +28,8 @@ import org.labkey.remoteapi.query.ContainerFilter;
 import org.labkey.remoteapi.query.SelectRowsCommand;
 import org.labkey.remoteapi.query.SelectRowsResponse;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 public class LabkeyDumper {
 
 	private Connection connection = null;
@@ -48,7 +50,7 @@ public class LabkeyDumper {
 		for (Map<String, Object> study : studyData) {
 			System.out.println("{");
 			for (String key : study.keySet()) {
-				System.out.println("\"" + key + "\" : \"" + study.get(key)
+				System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson((String)study.get(key))
 						+ "\",");
 			}
 			System.out.println("},");
