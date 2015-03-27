@@ -50,7 +50,7 @@ public class LabkeyDumper {
 		for (Map<String, Object> study : studyData) {
 			System.out.println("{");
 			for (String key : study.keySet()) {
-				System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson((String)study.get(key))
+				System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson(String.valueOf(study.get(key)))
 						+ "\",");
 			}
 			System.out.println("},");
