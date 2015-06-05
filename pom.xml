@@ -26,15 +26,13 @@
   <dependencies>
     <dependency>
       <groupId>org.labkey</groupId>
-      <artifactId>labkey-client</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <artifactId>labkey-client-api</artifactId>
+      <version>0.1</version>
     </dependency>
-	<dependency>
-	    <groupId>org.apache.commons</groupId>
-	    <artifactId>commons-lang3</artifactId>
-	    <version>3.2</version>
-	</dependency>
-
-  
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.2</version>
+    </dependency>
   </dependencies>
 </project>
