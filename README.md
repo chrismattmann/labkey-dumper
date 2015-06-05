@@ -1,6 +1,6 @@
 # Labkey Dumper
 
-This project builds upon the [Labkey Client](https://github.com/chrismattmann/labkey-client) program to connect to a Labkey instance and then to dump out the Study objects from it into a JSON format. The JSON format looks like:
+This project builds upon the [Labkey Client](https://www.labkey.org/wiki/home/Documentation/page.view?name=javaAPI) API to connect to a Labkey instance and then to dump out the Study objects from it into a JSON format. The JSON format looks like:
 
 ```
 {"studies":[
@@ -28,11 +28,8 @@ This project builds upon the [Labkey Client](https://github.com/chrismattmann/la
 # Building this appilcation
 
 0. mkdir -p $HOME/src && cd $HOME/src
-1. git clone https://github.com/chrismattmann/labkey-client.git
-2. cd labkey-client && mvn install assembly:assembly
-3. cd ..
-4. git clone https://github.com/chrismattmann/labkey-dumper.git
-5. cd labkey-dumper && mvn install assembly:assembly
+1. git clone https://github.com/chrismattmann/labkey-dumper.git
+2. cd labkey-dumper && mvn install assembly:assembly
 
 All done!
 
