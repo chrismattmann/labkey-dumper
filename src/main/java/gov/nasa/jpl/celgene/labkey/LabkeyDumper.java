@@ -28,7 +28,7 @@ import org.labkey.remoteapi.query.ContainerFilter;
 import org.labkey.remoteapi.query.SelectRowsCommand;
 import org.labkey.remoteapi.query.SelectRowsResponse;
 
-import org.apache.commons.lang3.StringEscapeUtils;
+import org.json.simple.JSONObject;
 
 public class LabkeyDumper {
 
@@ -54,11 +54,11 @@ public class LabkeyDumper {
 			for (int j=0; j < keySet.length; j++){
 			    String key = keySet[j];
 			    if (j+1 >= keySet.length){
-					System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson(String.valueOf(study.get(key)))
+					System.out.println("\"" + key + "\" : \"" + JSONObject.escape(String.valueOf(study.get(key)))
 							+ "\"");			    	
 			    }
 			    else{
-					System.out.println("\"" + key + "\" : \"" + StringEscapeUtils.escapeJson(String.valueOf(study.get(key)))
+					System.out.println("\"" + key + "\" : \"" + JSONObject.escape(String.valueOf(study.get(key)))
 							+ "\",");			    	
 			    }
 			}
